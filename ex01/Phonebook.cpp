@@ -1,38 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pramos-m <pramos-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/01 12:07:54 by pramos-m          #+#    #+#             */
-/*   Updated: 2023/08/01 14:14:42 by pramos-m         ###   ########.fr       */
+/*   Created: 2023/08/01 14:13:26 by pramos-m          #+#    #+#             */
+/*   Updated: 2023/08/01 14:15:25 by pramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __PHONEBOOK_H__
-# define __PHONEBOOK_H__
+#include "PhoneBook.hpp"
 
-#include    "Contact.hpp"
-
-class PhoneBook
+PhoneBook::PhoneBook(void)
 {
-	private:
-		Contact _contact[8];
-		int     _size;
-		int     _idx;
-	public:
-		//Default constructor
-		PhoneBook();
-		
-		//Expanded constructor
-		PhoneBook(/* args */);
-		
-		void	addContact(Contact contact);
-		Contact findContact(int n);
-		int		getSize(void);
-		~PhoneBook();
-};
+    _size = 0;
+    _idx = 0;
+}
 
+PhoneBook::PhoneBook(/* args */)
+{
+}
 
-#endif
+PhoneBook::~PhoneBook()
+{
+}
+
+int	PhoneBook::getSize(void)
+{
+	return (size);
+}
+
+Contact	PhoneBook::findContact(int	n)
+{
+	return (_contact[n]);
+}
