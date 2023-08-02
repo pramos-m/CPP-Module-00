@@ -1,37 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.cpp                                      :+:      :+:    :+:   */
+/*   Contact_utils.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pramos-m <pramos-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/01 14:13:26 by pramos-m          #+#    #+#             */
-/*   Updated: 2023/08/02 15:08:37 by pramos-m         ###   ########.fr       */
+/*   Created: 2023/08/02 15:25:02 by pramos-m          #+#    #+#             */
+/*   Updated: 2023/08/02 15:58:39 by pramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
+#ifndef __CONTACT_UTILS_H__
+# define __CONTACT_UTILS_H__
 
-PhoneBook::PhoneBook(void)
-{
-    _size = 0;
-    _idx = 0;
-}
+# include "PhoneBook.hpp"
 
-// PhoneBook::PhoneBook(/* args */)
-// {
-// }
+Contact	create_contact(void);
+// void	search_contact(PhoneBook phonebook);
+bool	check_str_num(std::string str);
 
-PhoneBook::~PhoneBook()
-{
-}
-
-int	PhoneBook::getSize(void)
-{
-	return (_size);
-}
-
-Contact	PhoneBook::findContact(int	n)
-{
-	return (_contact[n]);
-}
+#endif

@@ -6,7 +6,7 @@
 /*   By: pramos-m <pramos-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 12:08:28 by pramos-m          #+#    #+#             */
-/*   Updated: 2023/08/01 12:59:55 by pramos-m         ###   ########.fr       */
+/*   Updated: 2023/08/02 15:17:45 by pramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Contact::Contact(std::string first_name, std::string last_name, \
 				std::string nickname, std::string darkest_secret, \
 				int	phone_number)
 {
-    first_name = first_name;
+    _first_name = first_name;
 	_last_name = last_name;
 	_nickname = nickname;
 	_darkest_secret = darkest_secret;
@@ -55,22 +55,27 @@ std::string Contact::getPhone_number(void)
     return (_phone_number);
 }
 
-std::string    Contact::setFirst_name(std::string first_name)
+void    Contact::setFirst_name(std::string first_name)
 {
     _first_name = first_name;
 }
 
-std::string    Contact::setNickname(std::string nickname)
+void    Contact::setLast_name(std::string last_name)
+{
+    _last_name = last_name;
+}
+
+void    Contact::setNickname(std::string nickname)
 {
     _nickname = nickname;
 }
 
-std::string    Contact::setDarkest_secret(std::string darkest_secret)
+void    Contact::setDarkest_secret(std::string darkest_secret)
 {
     _darkest_secret = darkest_secret;
 }
 
-std::string    Contact::setDarkest_secret(std::string phone_number)
+void    Contact::setPhone_number(std::string phone_number)
 {
     _phone_number = phone_number;
 }

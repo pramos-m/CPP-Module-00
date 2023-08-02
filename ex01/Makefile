@@ -6,16 +6,18 @@
 #    By: pramos-m <pramos-m@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/26 19:26:26 by pramos-m          #+#    #+#              #
-#    Updated: 2023/08/01 12:08:16 by pramos-m         ###   ########.fr        #
+#    Updated: 2023/08/02 15:24:26 by pramos-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = PhoneBook
-SRC = main.cpp PhoneBook.cpp Contact.cpp utils.cpp
-CC = c++
+NAME = Contacts_Organizer
+
+SRC = Phonebook.cpp Contact.cpp main.cpp Contact_utils.cpp
 OBJ = $(SRC:.cpp=.o)
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CC = g++
 RM = rm -f
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+
 
 all: $(NAME)
 

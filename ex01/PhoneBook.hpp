@@ -6,7 +6,7 @@
 /*   By: pramos-m <pramos-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 12:07:54 by pramos-m          #+#    #+#             */
-/*   Updated: 2023/08/01 14:14:42 by pramos-m         ###   ########.fr       */
+/*   Updated: 2023/08/02 15:55:59 by pramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define __PHONEBOOK_H__
 
 #include    "Contact.hpp"
+#include	"Contact_utils.hpp"
 
 class PhoneBook
 {
@@ -26,7 +27,7 @@ class PhoneBook
 		PhoneBook();
 		
 		//Expanded constructor
-		PhoneBook(/* args */);
+		//PhoneBook(/* args */);
 		
 		void	addContact(Contact contact);
 		Contact findContact(int n);
