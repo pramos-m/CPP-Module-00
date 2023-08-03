@@ -16,7 +16,7 @@
 # include "PhoneBook.hpp"
 
 Contact	create_contact(void);
-// void	search_contact(PhoneBook phonebook);
+void	search_contact(PhoneBook phonebook);
 bool	check_str_num(std::string str);
 
 #endif

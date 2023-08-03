@@ -59,3 +59,33 @@ Contact	create_contact(void)
 	new_contact.setPhone_number(str);
 	return (new_contact);
 }
+
+void	print_contacts(PhoneBook phonebook)
+{
+	std::string	str;
+
+	std::cout << "|     index|first name| last name|  nickname|" << std::endl;
+	for (int i = 0; i < phonebook.getSize(); i++)
+	{
+	}
+
+}
+
+void	search_contact(PhoneBook phonebook)
+{
+	std::string	str;
+	short int	idx;
+	bool		valid;
+
+	if (phonebook.getSize() == 0)
+	{
+		std::cout << "   Phonebook is empty" << std::endl;
+		return ;
+	}
+	print_contacts(phonebook);
+	std::cout << "Select index: ";
+	if (!std::getline(std::cin, str))
+		exit(0);
+	valid = check_str_num(str);
+	
+}
