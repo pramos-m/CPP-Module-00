@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Contact_utils.hpp"
+# include "ContactUtils.hpp"
+# include <cstdlib>
+# include <iomanip>
 
 bool	check_str_num(std::string str)
 {
@@ -67,6 +69,9 @@ void	print_contacts(PhoneBook phonebook)
 	std::cout << "|     index|first name| last name|  nickname|" << std::endl;
 	for (int i = 0; i < phonebook.getSize(); i++)
 	{
+		std::cout << "|";
+		std::cout << std::setw(10) << i;
+		std::cout << "|";
 	}
 
 }
@@ -87,5 +92,17 @@ void	search_contact(PhoneBook phonebook)
 	if (!std::getline(std::cin, str))
 		exit(0);
 	valid = check_str_num(str);
-	
+	idx = 0;
+	if (valid == true)
+		idx = std::atoi(str.c_str());
+	if (valid == false || idx < 0 || idx > phonebook.getSize() - 1)
+	{
+		std::cout << "Invalid Index" << std::endl;
+		return ;
+	}
+	std::cout << "First name: " << phonebook.findContact(idx).getFirst_name() << std::endl;
+	std::cout << "Last name: " << phonebook.findContact(idx).getLast_name() << std::endl;
+	std::cout << "Nickname: " << phonebook.findContact(idx).getNickname() << std::endl;
+	std::cout << "Phone number: " << phonebook.findContact(idx).getPhone_number() << std::endl;
+	std::cout << "Darkest secret: " << phonebook.findContact(idx).getDarkest_secret() << std::endl;
 }

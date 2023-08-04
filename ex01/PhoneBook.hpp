@@ -14,7 +14,6 @@
 # define __PHONEBOOK_H__
 
 #include    "Contact.hpp"
-#include	"Contact_utils.hpp"
 
 class PhoneBook
 {
@@ -27,7 +26,7 @@ class PhoneBook
 		PhoneBook();
 		
 		//Expanded constructor
-		//PhoneBook(/* args */);
+		PhoneBook(Contact contact);
 		
 		void	addContact(Contact contact);
 		Contact findContact(int n);

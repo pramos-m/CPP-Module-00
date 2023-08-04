@@ -10,30 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
+#include "ContactUtils.hpp"
 
 void	show_options(void)
 {
-	std::cout << "Allowed options:\n *   ADD\n *   SEARCH\n *   EXIT" << std::endl;	
+	std::cout << "Allowed options:\n *   ADD\n *   SEARCH\n *   EXIT" << std::endl;
 }
 
 int main(void)
 {
-    PhoneBook pb;
+    PhoneBook phonebook;
     std::string str;
     bool		open;
 
-    show_options();
 	open = true;
+    show_options();
     while (open)
     {
 		str = " ";
         if (!std::getline(std::cin, str) || str.compare("EXIT") == 0)
 			open = false;
 		else if (str.compare("ADD") == 0)
-			create_contact();
+			phonebook.addContact(create_contact());
 		else if (str.compare("SEARCH") == 0)
-			std::cout << "YOU SAID SEARCH" << std::endl; //search_contact(phonebook);
+			search_contact(phonebook);
 		else
 		{
 			std::cout << "Invalid Option \n";

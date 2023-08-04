@@ -12,7 +12,7 @@
 
 NAME = Contacts_Organizer
 
-SRC = Phonebook.cpp Contact.cpp main.cpp Contact_utils.cpp
+SRC = Phonebook.cpp Contact.cpp main.cpp ContactUtils.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = g++
 RM = rm -f

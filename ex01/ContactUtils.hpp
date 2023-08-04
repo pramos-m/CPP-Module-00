@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __CONTACT_UTILS_H__
-# define __CONTACT_UTILS_H__
+#ifndef __CONTACTUTILS_H__
+# define __CONTACTUUTILS_H__
 
 # include "PhoneBook.hpp"
 

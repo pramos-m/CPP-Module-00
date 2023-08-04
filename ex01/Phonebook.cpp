@@ -18,9 +18,12 @@ PhoneBook::PhoneBook(void)
     _idx = 0;
 }
 
-// PhoneBook::PhoneBook(/* args */)
-// {
-// }
+PhoneBook::PhoneBook(Contact contact)
+{
+    _size = 0;
+    _idx = 0;
+    _contact [0] = contact;
+}
 
 PhoneBook::~PhoneBook()
 {
@@ -34,4 +37,12 @@ int	PhoneBook::getSize(void)
 Contact	PhoneBook::findContact(int	n)
 {
 	return (_contact[n]);
+}
+
+void	PhoneBook::addContact(Contact contact)
+{
+    _contact[_idx] = contact;
+	_idx = (_idx + 1) % 8;
+	if (_size < 8)
+		_size++;
 }
