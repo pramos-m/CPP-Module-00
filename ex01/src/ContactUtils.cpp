@@ -6,7 +6,7 @@
 /*   By: pramos-m <pramos-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 15:24:32 by pramos-m          #+#    #+#             */
-/*   Updated: 2023/08/04 14:30:43 by pramos-m         ###   ########.fr       */
+/*   Updated: 2023/08/04 15:27:47 by pramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ bool	check_str_num(std::string str)
 
 void	str_setw(std::string str)
 {
-	
+	if (str.length() > 9)
+		str.erase(9, str.length()).append(1, '.');
+	std::cout << std::setw(10) << str;
 }
 
 std::string	get_field(std::string field, int mode)
