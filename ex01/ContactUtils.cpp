@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact_utils.cpp                                  :+:      :+:    :+:   */
+/*   ContactUtils.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pramos-m <pramos-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 15:24:32 by pramos-m          #+#    #+#             */
-/*   Updated: 2023/08/02 16:01:36 by pramos-m         ###   ########.fr       */
+/*   Updated: 2023/08/04 14:30:43 by pramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@ bool	check_str_num(std::string str)
 		if (std::isdigit(str[i]) == 0)
 			return (false);
 	return (true);
+}
+
+void	str_setw(std::string str)
+{
+	
 }
 
 std::string	get_field(std::string field, int mode)
@@ -72,6 +77,13 @@ void	print_contacts(PhoneBook phonebook)
 		std::cout << "|";
 		std::cout << std::setw(10) << i;
 		std::cout << "|";
+		str_setw(phonebook.findContact(i).getFirst_name());
+		std::cout << "|";
+		str_setw(phonebook.findContact(i).getLast_name());
+		std::cout << "|";
+		str_setw(phonebook.findContact(i).getNickname());
+		std::cout << "|";
+		std::cout << std::endl;
 	}
 
 }
