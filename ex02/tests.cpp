@@ -38,6 +38,8 @@ int		main( void ) {
 	ints_t::iterator	wit_end		= withdrawals.end();
 
 	Account::displayAccountsInfos();
+	//[19920104_091532] accounts:8;total:20049;deposits:0;withdrawals:0
+	
 	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
 
 	for ( acc_int_t it( acc_begin, dep_begin );
@@ -48,6 +50,8 @@ int		main( void ) {
 	}
 
 	Account::displayAccountsInfos();
+	//[19920104_091532] accounts:8;total:21524;deposits:8;withdrawals:0
+	
 	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
 
 	for ( acc_int_t it( acc_begin, wit_begin );
@@ -58,7 +62,11 @@ int		main( void ) {
 	}
 
 	Account::displayAccountsInfos();
+	//[19920104_091532] accounts:8;total:12442;deposits:8;withdrawals:6
 	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
+	//[19920104_091532] index:0;amount:47;deposits:1;withdrawals:0
+	//and
+	//[19920104_091532] index:2;amount:864;closed
 
 	return 0;
 }
