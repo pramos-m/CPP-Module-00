@@ -6,11 +6,11 @@
 /*   By: pramos-m <pramos-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 12:08:28 by pramos-m          #+#    #+#             */
-/*   Updated: 2023/08/02 15:17:45 by pramos-m         ###   ########.fr       */
+/*   Updated: 2023/08/22 12:10:01 by pramos-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.hpp"
+#include "../inc/Contact.hpp"
 
 Contact::Contact(void)
 {
